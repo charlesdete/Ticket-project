@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+.container{
+    
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    color:#333 ;
+    margin-bottom:60px;
+}
+iframe{
+    width:1200px;
+    height:500px ;
+    filter: invert(100%);
+}
