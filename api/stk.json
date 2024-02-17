@@ -1,0 +1,31 @@
+{
+ "Body":{
+    "stkCallback":{
+        "MerchantRequestID": "",
+        "CheckoutRequestID": "",
+        "ResultCode":0 ,
+        "ResultDesc": "This service is processed successfully.",
+        "CallbackMetadata":{
+            "Item":[
+                {
+                    "Name": "Amount",
+                    "Value": 1.00
+                },
+                {
+                    "Name": "Amount",
+                    "Value": 1.00 
+                },
+                {
+                    
+                }
+            ]
+        }
+
+
+    }
+ }
+
+
+
+
+}

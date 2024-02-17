@@ -1,9 +1,9 @@
-<?php
+<?php 
 //include the access token file
 include 'accesstoken.php';
 date_default_timezone_set('Africa/Nairobi');
 $ProcessrequestUrl ='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'localhost:8090/callback.php';
+$callbackurl = 'https://harrisonjuma.com/payments';
 $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
@@ -12,11 +12,11 @@ $Password =base64_encode($BusinessShortCode . $Passkey . $Timestamp);
 $Phone = '254794953436';
 $Money = '1';
 $PartyA = $Phone;
-$PartyB = '254794953436';
-$AccountReference = 'MY TICKET';
+$PartyB = '254708374149 ';
+$AccountReference = 'MyTICKET';
 $TransactionDesc = 'stkpush test';
 $Amount = $Money;
-$stkpushheader = ['Content-Type:application/json', 'Authorization:Bearer' . $access_token];
+$stkpushheader = ['Content-Type:application/json', 'Authorization:Bearer ' . $access_token];
 //initiate curl
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $ProcessrequestUrl);
@@ -32,7 +32,7 @@ $curl_post_data = array(
     'PartyA' => $PartyA,
     'PartyB' => $BusinessShortCode,
     'PhoneNumber' => $PartyA,
-    'CallBackURL' => $callbackurl,
+    'callbackurl' => $callbackurl,
     'AccountReference' => $AccountReference,
     'TransactionDesc' => $TransactionDesc
 
@@ -42,6 +42,7 @@ $data_string = json_encode($curl_post_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
-$curl_response = curl_exec($curl);
+// $curl_response = curl_exec($curl);
 
-echo $curl_response;
+echo $data_string;
+// echo $curl_response;

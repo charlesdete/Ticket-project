@@ -49,7 +49,7 @@ function showHint(str) {
           <form action="">
   <label for="gsearch"> <span class="material-icons-outlined">search</span></label>
   <input type="search" id="gsearch" name="gsearch" placeholder="Search..." class="search"  onkeyup="showHint(this.value)">
-  <button type="submit" class="search-btn">Search</button>
+  <!-- <button type="submit" class="search-btn">Search</button> -->
 </form>
 
 

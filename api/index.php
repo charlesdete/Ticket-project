@@ -44,6 +44,7 @@ $tickets=mysqli_query($conn,$query);
         <meta name="viewport" content="width=device-width", intial-scale="1.0">
         <title>Tickets</title>
         <link rel="stylesheet"  href="style1.css">
+        <link rel="stylesheet"  href="footer.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <script src="script.js" defer></script>
    
@@ -103,6 +104,10 @@ $tickets=mysqli_query($conn,$query);
            <?php endwhile ?>  
          </section>
         
+
+         <?php
+         include 'footer.php';
+         ?>
 
     </body>
 </html>

@@ -24,8 +24,7 @@ session_start();
               <?php
             if(isset($_SESSION['Email']))
             {
-            ?>
-              
+            ?> 
               <li><a href="logout.php">LOGOUT</a></li> 
             <?php
             }

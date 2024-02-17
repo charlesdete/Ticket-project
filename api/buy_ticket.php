@@ -96,5 +96,6 @@ if(isset($_GET['id'])){
 </table>
 
 </body>
+ 
 </html>
 
