@@ -23,13 +23,13 @@ echo "Starting to write file names.\n\n";
 foreach($files as $file) {
     if(is_dir($file)){
         // folders
-        $line_to_write = "\t\t- /bin/cp -R " . substr($file, - (strlen($file) - strlen($base_url) - 1)) . " \$DEPLOYPATH\n";
+        $line_to_write = "\t\t- /bin/cp -R /home/charlesd/repositories/Ticket-project/" . substr($file, - (strlen($file) - strlen($base_url) - 1)) . " \$DEPLOYPATH\n";
         fwrite($myfile, $line_to_write);
         echo $file . " was written successfully.\n\n";
     }
     else {
         // files
-        $line_to_write = "\t\t- /bin/cp " . substr($file, - (strlen($file) - strlen($base_url) - 1)) . " \$DEPLOYPATH\n";
+        $line_to_write = "\t\t- /bin/cp /home/charlesd/repositories/Ticket-project/" . substr($file, - (strlen($file) - strlen($base_url) - 1)) . " \$DEPLOYPATH\n";
         fwrite($myfile, $line_to_write);
         echo $file . " was written successfully.\n\n";
     }

@@ -2,65 +2,65 @@
 deployment:
 	tasks:
 		- export DEPLOYPATH=/home/charlesd/public_html/
-		- /bin/cp Add-category.php $DEPLOYPATH
-		- /bin/cp Add-ticket.php $DEPLOYPATH
-		- /bin/cp README.md $DEPLOYPATH
-		- /bin/cp accesstoken.php $DEPLOYPATH
-		- /bin/cp add-category.class.php $DEPLOYPATH
-		- /bin/cp add-category.contr.class.php $DEPLOYPATH
-		- /bin/cp add-category.inc.php $DEPLOYPATH
-		- /bin/cp buy_ticket.class.php $DEPLOYPATH
-		- /bin/cp buy_ticket.contr.class.php $DEPLOYPATH
-		- /bin/cp buy_ticket.inc.php $DEPLOYPATH
-		- /bin/cp buy_ticket.php $DEPLOYPATH
-		- /bin/cp call-back.php $DEPLOYPATH
-		- /bin/cp composer.json $DEPLOYPATH
-		- /bin/cp composer.lock $DEPLOYPATH
-		- /bin/cp contact.php $DEPLOYPATH
-		- /bin/cp cpanel-automation-script.php $DEPLOYPATH
-		- /bin/cp create-new-password.php $DEPLOYPATH
-		- /bin/cp dashboard-style.css $DEPLOYPATH
-		- /bin/cp dashboard.php $DEPLOYPATH
-		- /bin/cp dbh.class.php $DEPLOYPATH
-		- /bin/cp events-and-tickets.php $DEPLOYPATH
-		- /bin/cp footer-style.css $DEPLOYPATH
-		- /bin/cp footer.php $DEPLOYPATH
-		- /bin/cp footerpage.php $DEPLOYPATH
-		- /bin/cp forgot-password.php $DEPLOYPATH
-		- /bin/cp header.php $DEPLOYPATH
-		- /bin/cp home.php $DEPLOYPATH
-		- /bin/cp -R images $DEPLOYPATH
-		- /bin/cp -R includes $DEPLOYPATH
-		- /bin/cp index.php $DEPLOYPATH
-		- /bin/cp log_user_activity.php $DEPLOYPATH
-		- /bin/cp login.php $DEPLOYPATH
-		- /bin/cp logout.php $DEPLOYPATH
-		- /bin/cp main.js $DEPLOYPATH
-		- /bin/cp map.php $DEPLOYPATH
-		- /bin/cp -R myticket.php $DEPLOYPATH
-		- /bin/cp registration.php $DEPLOYPATH
-		- /bin/cp report.php $DEPLOYPATH
-		- /bin/cp reset-password.php $DEPLOYPATH
-		- /bin/cp script.js $DEPLOYPATH
-		- /bin/cp stk.json $DEPLOYPATH
-		- /bin/cp stkpush.php $DEPLOYPATH
-		- /bin/cp style.css $DEPLOYPATH
-		- /bin/cp style1.css $DEPLOYPATH
-		- /bin/cp style2.css $DEPLOYPATH
-		- /bin/cp ticket-delete.php $DEPLOYPATH
-		- /bin/cp ticket-inc.php $DEPLOYPATH
-		- /bin/cp ticket-post.php $DEPLOYPATH
-		- /bin/cp ticket-status.php $DEPLOYPATH
-		- /bin/cp ticket-update.php $DEPLOYPATH
-		- /bin/cp ticket.class.php $DEPLOYPATH
-		- /bin/cp ticket.contr.class.php $DEPLOYPATH
-		- /bin/cp ticket_pricing.php $DEPLOYPATH
-		- /bin/cp user-add.classes.php $DEPLOYPATH
-		- /bin/cp user-add.php $DEPLOYPATH
-		- /bin/cp user-delete.php $DEPLOYPATH
-		- /bin/cp user-operation.class.php $DEPLOYPATH
-		- /bin/cp user-update.class.php $DEPLOYPATH
-		- /bin/cp user-update.contr.class.php $DEPLOYPATH
-		- /bin/cp user-update.php $DEPLOYPATH
-		- /bin/cp users.php $DEPLOYPATH
-		- /bin/cp -R vendor $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/Add-category.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/Add-ticket.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/README.md $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/accesstoken.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/add-category.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/add-category.contr.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/add-category.inc.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/buy_ticket.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/buy_ticket.contr.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/buy_ticket.inc.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/buy_ticket.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/call-back.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/composer.json $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/composer.lock $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/contact.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/cpanel-automation-script.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/create-new-password.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/dashboard-style.css $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/dashboard.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/dbh.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/events-and-tickets.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/footer-style.css $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/footer.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/footerpage.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/forgot-password.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/header.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/home.php $DEPLOYPATH
+		- /bin/cp -R /home/charlesd/repositories/Ticket-project/images $DEPLOYPATH
+		- /bin/cp -R /home/charlesd/repositories/Ticket-project/includes $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/index.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/log_user_activity.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/login.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/logout.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/main.js $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/map.php $DEPLOYPATH
+		- /bin/cp -R /home/charlesd/repositories/Ticket-project/myticket.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/registration.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/report.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/reset-password.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/script.js $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/stk.json $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/stkpush.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/style.css $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/style1.css $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/style2.css $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket-delete.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket-inc.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket-post.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket-status.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket-update.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket.contr.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/ticket_pricing.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-add.classes.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-add.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-delete.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-operation.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-update.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-update.contr.class.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/user-update.php $DEPLOYPATH
+		- /bin/cp /home/charlesd/repositories/Ticket-project/users.php $DEPLOYPATH
+		- /bin/cp -R /home/charlesd/repositories/Ticket-project/vendor $DEPLOYPATH
