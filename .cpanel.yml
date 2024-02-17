@@ -2,5 +2,5 @@
 deployment:
 	tasks:
 		- export DEPLOYPATH=/home/charlesd/public_html
-		- /bin/cp -R /home/charlesd/repositories/Ticket-project/* $DEPLOYPATH
+		- /bin/cp -R * $DEPLOYPATH
 		
