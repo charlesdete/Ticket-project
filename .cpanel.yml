@@ -1,66 +1,66 @@
 ---
 deployment:
 	tasks:
-		-export DEPLOYPATH=/home/charlesd/myticket.charlesdete.com/
-		-/bin/cp Add-category.php $DEPLOYPATH
-		-/bin/cp Add-ticket.php $DEPLOYPATH
-		-/bin/cp README.md $DEPLOYPATH
-		-/bin/cp accesstoken.php $DEPLOYPATH
-		-/bin/cp add-category.class.php $DEPLOYPATH
-		-/bin/cp add-category.contr.class.php $DEPLOYPATH
-		-/bin/cp add-category.inc.php $DEPLOYPATH
-		-/bin/cp buy_ticket.class.php $DEPLOYPATH
-		-/bin/cp buy_ticket.contr.class.php $DEPLOYPATH
-		-/bin/cp buy_ticket.inc.php $DEPLOYPATH
-		-/bin/cp buy_ticket.php $DEPLOYPATH
-		-/bin/cp call-back.php $DEPLOYPATH
-		-/bin/cp composer.json $DEPLOYPATH
-		-/bin/cp composer.lock $DEPLOYPATH
-		-/bin/cp contact.php $DEPLOYPATH
-		-/bin/cp cpanel-automation-script.php $DEPLOYPATH
-		-/bin/cp create-new-password.php $DEPLOYPATH
-		-/bin/cp dashboard-style.css $DEPLOYPATH
-		-/bin/cp dashboard.php $DEPLOYPATH
-		-/bin/cp dbh.class.php $DEPLOYPATH
-		-/bin/cp events-and-tickets.php $DEPLOYPATH
-		-/bin/cp footer-style.css $DEPLOYPATH
-		-/bin/cp footer.php $DEPLOYPATH
-		-/bin/cp footerpage.php $DEPLOYPATH
-		-/bin/cp forgot-password.php $DEPLOYPATH
-		-/bin/cp header.php $DEPLOYPATH
-		-/bin/cp home.php $DEPLOYPATH
-		-/bin/cp -R images $DEPLOYPATH
-		-/bin/cp -R includes $DEPLOYPATH
-		-/bin/cp index.php $DEPLOYPATH
-		-/bin/cp log_user_activity.php $DEPLOYPATH
-		-/bin/cp login.php $DEPLOYPATH
-		-/bin/cp logout.php $DEPLOYPATH
-		-/bin/cp main.js $DEPLOYPATH
-		-/bin/cp map.php $DEPLOYPATH
-		-/bin/cp -R myticket.php $DEPLOYPATH
-		-/bin/cp registration.php $DEPLOYPATH
-		-/bin/cp report.php $DEPLOYPATH
-		-/bin/cp reset-password.php $DEPLOYPATH
-		-/bin/cp script.js $DEPLOYPATH
-		-/bin/cp stk.json $DEPLOYPATH
-		-/bin/cp stkpush.php $DEPLOYPATH
-		-/bin/cp style.css $DEPLOYPATH
-		-/bin/cp style1.css $DEPLOYPATH
-		-/bin/cp style2.css $DEPLOYPATH
-		-/bin/cp ticket-delete.php $DEPLOYPATH
-		-/bin/cp ticket-inc.php $DEPLOYPATH
-		-/bin/cp ticket-post.php $DEPLOYPATH
-		-/bin/cp ticket-status.php $DEPLOYPATH
-		-/bin/cp ticket-update.php $DEPLOYPATH
-		-/bin/cp ticket.class.php $DEPLOYPATH
-		-/bin/cp ticket.contr.class.php $DEPLOYPATH
-		-/bin/cp ticket_pricing.php $DEPLOYPATH
-		-/bin/cp user-add.classes.php $DEPLOYPATH
-		-/bin/cp user-add.php $DEPLOYPATH
-		-/bin/cp user-delete.php $DEPLOYPATH
-		-/bin/cp user-operation.class.php $DEPLOYPATH
-		-/bin/cp user-update.class.php $DEPLOYPATH
-		-/bin/cp user-update.contr.class.php $DEPLOYPATH
-		-/bin/cp user-update.php $DEPLOYPATH
-		-/bin/cp users.php $DEPLOYPATH
-		-/bin/cp -R vendor $DEPLOYPATH
+		- export DEPLOYPATH=/home/charlesd/public_html/
+		- /bin/cp Add-category.php $DEPLOYPATH
+		- /bin/cp Add-ticket.php $DEPLOYPATH
+		- /bin/cp README.md $DEPLOYPATH
+		- /bin/cp accesstoken.php $DEPLOYPATH
+		- /bin/cp add-category.class.php $DEPLOYPATH
+		- /bin/cp add-category.contr.class.php $DEPLOYPATH
+		- /bin/cp add-category.inc.php $DEPLOYPATH
+		- /bin/cp buy_ticket.class.php $DEPLOYPATH
+		- /bin/cp buy_ticket.contr.class.php $DEPLOYPATH
+		- /bin/cp buy_ticket.inc.php $DEPLOYPATH
+		- /bin/cp buy_ticket.php $DEPLOYPATH
+		- /bin/cp call-back.php $DEPLOYPATH
+		- /bin/cp composer.json $DEPLOYPATH
+		- /bin/cp composer.lock $DEPLOYPATH
+		- /bin/cp contact.php $DEPLOYPATH
+		- /bin/cp cpanel-automation-script.php $DEPLOYPATH
+		- /bin/cp create-new-password.php $DEPLOYPATH
+		- /bin/cp dashboard-style.css $DEPLOYPATH
+		- /bin/cp dashboard.php $DEPLOYPATH
+		- /bin/cp dbh.class.php $DEPLOYPATH
+		- /bin/cp events-and-tickets.php $DEPLOYPATH
+		- /bin/cp footer-style.css $DEPLOYPATH
+		- /bin/cp footer.php $DEPLOYPATH
+		- /bin/cp footerpage.php $DEPLOYPATH
+		- /bin/cp forgot-password.php $DEPLOYPATH
+		- /bin/cp header.php $DEPLOYPATH
+		- /bin/cp home.php $DEPLOYPATH
+		- /bin/cp -R images $DEPLOYPATH
+		- /bin/cp -R includes $DEPLOYPATH
+		- /bin/cp index.php $DEPLOYPATH
+		- /bin/cp log_user_activity.php $DEPLOYPATH
+		- /bin/cp login.php $DEPLOYPATH
+		- /bin/cp logout.php $DEPLOYPATH
+		- /bin/cp main.js $DEPLOYPATH
+		- /bin/cp map.php $DEPLOYPATH
+		- /bin/cp -R myticket.php $DEPLOYPATH
+		- /bin/cp registration.php $DEPLOYPATH
+		- /bin/cp report.php $DEPLOYPATH
+		- /bin/cp reset-password.php $DEPLOYPATH
+		- /bin/cp script.js $DEPLOYPATH
+		- /bin/cp stk.json $DEPLOYPATH
+		- /bin/cp stkpush.php $DEPLOYPATH
+		- /bin/cp style.css $DEPLOYPATH
+		- /bin/cp style1.css $DEPLOYPATH
+		- /bin/cp style2.css $DEPLOYPATH
+		- /bin/cp ticket-delete.php $DEPLOYPATH
+		- /bin/cp ticket-inc.php $DEPLOYPATH
+		- /bin/cp ticket-post.php $DEPLOYPATH
+		- /bin/cp ticket-status.php $DEPLOYPATH
+		- /bin/cp ticket-update.php $DEPLOYPATH
+		- /bin/cp ticket.class.php $DEPLOYPATH
+		- /bin/cp ticket.contr.class.php $DEPLOYPATH
+		- /bin/cp ticket_pricing.php $DEPLOYPATH
+		- /bin/cp user-add.classes.php $DEPLOYPATH
+		- /bin/cp user-add.php $DEPLOYPATH
+		- /bin/cp user-delete.php $DEPLOYPATH
+		- /bin/cp user-operation.class.php $DEPLOYPATH
+		- /bin/cp user-update.class.php $DEPLOYPATH
+		- /bin/cp user-update.contr.class.php $DEPLOYPATH
+		- /bin/cp user-update.php $DEPLOYPATH
+		- /bin/cp users.php $DEPLOYPATH
+		- /bin/cp -R vendor $DEPLOYPATH
