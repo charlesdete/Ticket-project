@@ -3,7 +3,7 @@
 include 'accesstoken.php';
 date_default_timezone_set('Africa/Nairobi');
 $ProcessrequestUrl ='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'https://harrisonjuma.com/payments';
+$callbackurl = 'https://charlesdete.com/callback.php';
 $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
@@ -42,7 +42,6 @@ $data_string = json_encode($curl_post_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
-// $curl_response = curl_exec($curl);
+$curl_response = curl_exec($curl);
 
-echo $data_string;
-// echo $curl_response;
+echo $curl_response;
