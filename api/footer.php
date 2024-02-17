@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="footer-style.css">
 <footer>
          
             <div class="footer_socials">
