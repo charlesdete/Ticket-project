@@ -15,6 +15,7 @@ if(!$conn){
     die("connection failed:" .mysqli_connect_error());
 }
 
+
 //Fetch data from the database
 $sql = "SELECT * FROM tickets WHERE is_featured= 1";
 $query = mysqli_query($conn, $sql);
@@ -46,7 +47,7 @@ $result =mysqli_fetch_assoc($query);
       </div> 
 
         <div class="sub-body">
-         <div class="wrapper">
+    {}     <div class="wrapper">
 
          <div class="card">
          <img src="images/The-Equalizer-3.png">
