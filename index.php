@@ -13,9 +13,9 @@
 // session_destroy();
 
 $servername = "localhost";
-$dbname = "event_ticket";
-$dbusername = "charlie";
-$dbpassword = "root123@";
+$dbname = "charlesd_event_ticket";
+$dbusername = "charlesd_admin";
+$dbpassword = "charlesdete7800@";
  
 $conn =new mysqli($servername,$dbusername,$dbpassword,$dbname);
 
