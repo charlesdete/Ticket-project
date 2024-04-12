@@ -1,3 +1,7 @@
+<?php
+include 'header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,9 @@
         </h2>
     <form action=" <?php echo
     htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+   <div class="form-group ">      
          <?php if(isset($_GET['error'])){?>
+
             <p class="error"><?php echo $_GET ['error'];?></p> 
        <?php  } ?>  
             
@@ -36,7 +42,7 @@
         
         <a href="registration.php"> Create an account </a></br>
         <a href="forgot-password.php">Forgotten Password</a>
-    
+            </div>
          </form>
             </div>
                </div>
@@ -64,7 +70,7 @@ if(!$conn){
     die("connection failed:" .mysqli_connect_error());
 }
 
-include 'header.php';
+
 // define variables and set to empty values
  $emailErr =  $passwordErr =  "";
  $email =  $password = "";
@@ -135,8 +141,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     //  login was successfull.. proceed with setting cookies and sessions and redirecting
                     
                     $_SESSION['Email'] = $email;
+                    $_SESSION['id'] = $id;
                     
-        
                     if(!empty($_POST['remember'])){
                         $set_remember = $_POST['remember'];
                         

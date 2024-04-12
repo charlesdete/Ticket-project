@@ -29,7 +29,7 @@ if(isset($_GET['id'])){
     
       
     
-      header('Location:users.php');
+      header('Location:ticket-status.php');
 
 }
 

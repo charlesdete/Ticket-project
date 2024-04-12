@@ -6,10 +6,14 @@
 //       header ('location:login.php'); 
 //  }
 
+// include 'dbh-class.php';
+  
 $servername = "localhost";
 $dbname = "event_ticket";
 $dbusername = "charlie";
 $dbpassword = "root123@";
+
+
  
 $conn =mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
 
@@ -17,12 +21,11 @@ $conn =mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
 if(!$conn){
     die("connection failed:" .mysqli_connect_error());
 }
+
 //fetch categories from database
-$query ="SELECT * FROM categories";
-$categories =mysqli_query($conn,$query);
-$category =mysqli_fetch_assoc($categories);
-
-
+$sql = "SELECT * FROM categories ";
+$query= mysqli_query($conn,$sql);
+$results = mysqli_fetch_assoc($query);
 
 
 include 'header.php';
@@ -56,11 +59,10 @@ include 'header.php';
                <label>Category</label> 
                <select name="Categories_title" class="input-style">              
                <p>
-                    <?php  while ($category_id = mysqli_fetch_assoc($categories)) :?>
-                    <option value="<?= $category_id['id'] ?>"><?= $category_id['Title']?></option> 
+                    <?php  while ($results = mysqli_fetch_assoc($query)) :?>
+                    <option value="<?= $results['id'] ?>"><?= $results['Title']?></option> 
                      <?php endwhile ?>
                     </p>
-                    
                 </select>
                     
                      

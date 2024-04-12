@@ -29,6 +29,7 @@ if(isset($_GET['id'])){
     //    // die();
     } 
 
+   
 ?>
 
 <!DOCTYPE html>
@@ -43,57 +44,69 @@ if(isset($_GET['id'])){
         <script src="script.js" defer></script>
    
     </head>
-<body>
+ <body>
 
     <section class="singleticket">
-    <h5><?= $ticket['Title'] ?></h5>
-        <div class="singleticket_container">                
-                
-            <div class="singleticket_thumbnail">
+    <h5 class="ticket_title"><?= $ticket['Title'] ?> </h5>
+                        
+            <div class="ticket-details">
                 <img src="images/<?= $ticket['Thumbnail'] ?>" class="singleticket_thumbnail"> 
-            </div>
+            
           <div class="singleticket_details">
-             <p> <?=substr( $ticket['Body'],0, 300) ?>...</p> 
-               
+             <p> <?=substr( $ticket['Body'],0, 300) ?>...</p>
             <p> Date: <?= date("M d, Y",strtotime($ticket['Date'])) ?></p> 
               <p>Location: <?= $ticket['Location'] ?></p>   
-              <p>Cost: <?= $ticket['price'] ?></p>      
+              <p>Cost:Ksh. <?= $ticket['price'] ?></p> 
+              <!-- <p>Host: <?= $ticket['Host']?> </p>      -->
+              <form  action="" method="POST">
+              <label for="no of tickets">Indicate number of tickets</label>
+              <select type="submit" name="quantity" id="no of tickets">
+              <option value="2">2</option>
+              <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+             </select>
+  </br>
+             <button type="submit" name="submit">Update</button>
+
+              </form>
+            
+             <?php
+if(isset($_POST['submit'])){
+    $quantity = $_POST['quantity'];
+    $price= $ticket['price'];
+
+    $total_cost= $_POST['quantity'] * $ticket['price'];
+
+    echo "<p>Total Cost:Ksh.". $total_cost."</p>";
+  
+}
+
+
+?>
+
           </div>
-        </div>
-    </section>
-</br>
-          <!---end of singlepost-->
-    <form  action="buy_ticket.inc.php" method="POST" class="buy_ticket">
-    <h2>Fill in to purchase</h2>
+            </div>
+  </br>
+        <div class="ticket_form">
+     <form  action="buy_ticket.inc.php" method="POST">
+    <h2>Enter the required details</h2>
       <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
       <input type="text" class="form-control" name="second_name" placeholder="Second Name" required>
       <input type="text" class="form-control" name="email" placeholder="Email Address" required>
       <input type="text" class="form-control" name="phone" placeholder="Phone Number" required>
-      <input type="text" class="form-control" name="cost" placeholder="Ticket Cost" required>
-      
-      <button type="submit" name="submit" class="btn-buy" >Buy </button>
+      <input type="text" class="form-control" name="cost" placeholder="Ticket Cost" value="<?= $total_cost ?>" required>
+      <button type="submit" name="submit" class="btn-buy" >Proceed for payment </button>
     </form>
-
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Ticket</th>
-      <th scope="col">Cost</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td><?= $ticket['Title'] ?></td>
-      <td><?= $ticket['price'] ?></td>
-      <td></td>
-    </tr>
+        </div>
+    </section>
+  </br>
     
-   
-  </tbody>
-</table>
 
 </body>
  

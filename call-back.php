@@ -16,3 +16,8 @@ $ResultCode = $data->Body->stkCallback->ResultCode;
 $Amount = $data->Body->stkCallback->CallbackMetadata->Item[0]->Value;
 $TransactionId = $data->Body->stkCallback->CallbackMetadata->Item[1]->Value;
 $UserPhoneNumber = $data->Body->stkCallback->CallbackMetadata->Item[4]->Value;
+
+//check if the transaction was succssful
+if($ResultCode == 0){
+    // store the transaction details in the database
+}

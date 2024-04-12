@@ -514,7 +514,7 @@ color: #000;
 width:150px;
 vertical-align: middle;
 margin-bottom: 40px;
-
+margin-left: 10px;
 }
 
 .details_container table {
@@ -523,11 +523,12 @@ margin-bottom: 40px;
    background: #fff;
 
 }
-.details_container table thead th{
+.details_container table thead{
    background: #fff;
    
 }
 .buy{
+   
    padding-left:5px;
    padding-right:5px;
    padding-top:5px;
@@ -541,4 +542,18 @@ margin-bottom: 40px;
 .buy:hover{
   background-color:white ;
   color: rgb(0, 94, 255);
+}
+/*screen sizes*/
+/* For Mobile */
+@media screen and (max-width: 540px) {
+   .view {
+       width: 400px;
+   }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+   .view {
+       width: 600px;
+   }
 }

@@ -3,7 +3,7 @@
 include 'accesstoken.php';
 date_default_timezone_set('Africa/Nairobi');
 $ProcessrequestUrl ='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'https://charlesdete.com/callback.php';
+$callbackurl = 'http://myticket.charlesdete.com/call-back.php';
 $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
@@ -12,7 +12,7 @@ $Password =base64_encode($BusinessShortCode . $Passkey . $Timestamp);
 $Phone = '254794953436';
 $Money = '1';
 $PartyA = $Phone;
-$PartyB = '254708374149 ';
+$PartyB = '254708374149';
 $AccountReference = 'MyTICKET';
 $TransactionDesc = 'stkpush test';
 $Amount = $Money;
@@ -43,5 +43,5 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
 $curl_response = curl_exec($curl);
-
+ 
 echo $curl_response;

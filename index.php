@@ -1,40 +1,38 @@
 <?php
 
-
- 
-//  if(!isset($_SESSION['Email'])){
-//        header ('location:login.php'); 
-//   }
+ if(!isset($_SESSION['Email'])){
+      header ('location:login.php'); 
+  }
 
 
-
-// Clear the session and destroy it
-// session_unset();
-// session_destroy();
-
-$servername = "localhost";
-$dbname = "charlesd_event_ticket";
-$dbusername = "charlesd_admin";
-$dbpassword = "charlesdete7800@";
- 
-$conn =new mysqli($servername,$dbusername,$dbpassword,$dbname);
-
-//check connection
-if(!$conn){
-    die("connection failed:" .mysqli_connect_error());
-}
+require 'dbh-class.php';
 
 
-$featured_query= "SELECT * FROM tickets WHERE is_featured=1";
-$featured_result =mysqli_query($conn,$featured_query);
-$featured =mysqli_fetch_assoc($featured_result);
+class buy_ticket extends Dbh{
 
+  function feature($featured){
+  
+      $stmt= $this->connect()->prepare('SELECT * FROM tickets WHERE is_featured=1";) VALUES (?);');
+     
+      if(!$stmt->execute(array($featured))){
+      $stmt = null;
+     header('Location:index.php?error=stmtfailed');
+     exit();
+  }
+  $resultCheck= true;
+  }
+  }
+  
 include 'log_user_activity.php';
 include 'header.php';
 
 //fetch 9 posts from posts table
 $query = "SELECT * FROM tickets ORDER BY Date DESC LIMIT 9";
 $tickets=mysqli_query($conn,$query);
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,13 +53,21 @@ $tickets=mysqli_query($conn,$query);
            <div class="cover">
             <i id="left" class="fa-solid fa-angle-left"></i>
              <div class="carousel">
+              
                 <img src="images/lebron.jpg" alt="img">
+                
                 <img src="images/Festivals.jpg" alt="img">
+
                 <img src="images/upcoming-events.jpg" alt="img">
+
                 <img src="images/spider.jpg" alt="img">
+
                 <img src="images/all-events.jpg" alt="img">
+                
                 <img src="images/cypher.jpg" alt="img">
+
                 <img src="images/events.jpg" alt="img">
+
              </div>
              <i id="right"  class="fa-solid fa-angle-right"></i>
            </div> 
@@ -86,19 +92,25 @@ $tickets=mysqli_query($conn,$query);
               <a href="ticket-post.php?id=<?= $category['id'] ?>" class="category_button"><?=$category_title ?></a> 
               <table>
             <thead>
+     
                 <?= date("M d, Y ",strtotime($ticket['Date'])) ?>
                 &nbsp; 
                 <?= $ticket['Location'] ?>
                
             </thead>
-            <tbody>
-           
-            </tbody>
-        </table>
-        <a href="buy_ticket.php?id=<?= $ticket['id'] ?>" class="buy" >Buy Ticket</a>
-      
-        
-              </div>
+            
+              </table>
+              
+        <!-- <form action="index.php?id=<?php echo $ticket['id'] ?>" method="POST">
+        <input type="hidden" id="quantity" name="quantity" value="1">
+        <input type="hidden" name="title" value="<?php echo $ticket['Title'] ?>">
+        <input type="hidden" name="price"   value="<?php echo $ticket['price'] ?>">
+         <a href="buy_ticket.php?id=<?= $ticket['id'] ?>" class="buy" >Add to Cart</a> 
+        <input type="submit" name="Add_to_cart" class="add" value="Add To Cart"> 
+        </form> -->
+
+        <a href="buy_ticket.php?id=<?= $ticket['id'] ?>" class="buy" >Add to Cart</a>
+          </div>
               </div>
            </div>
            <?php endwhile ?>  
