@@ -15,8 +15,10 @@
 <!--lato font -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 <!--matrial icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script>
 function showHint(str) {
   if (str.length == 0) {
@@ -33,6 +35,9 @@ function showHint(str) {
     xmlhttp.send();
   }
 }
+
+const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
 </script>
 
 </head>
@@ -58,9 +63,9 @@ function showHint(str) {
 
           </div>
           <div class="header-right">
-          <span class="material-icons-outlined">notifications</span>
-          <span class="material-icons-outlined">mail</span>
-          <span class="material-icons-outlined">account_circle</span>
+          <span class="material-icons-outlined"><a href="" >notifications</span></a>
+          <span class="material-icons-outlined"><a href="mail.php" >mail</span></a>
+          <span class="material-icons-outlined"><a href="user-profile.php"> account_circle</span></a>
           </div>
   </header>
   <!--end header-->
@@ -69,7 +74,7 @@ function showHint(str) {
   <aside id="sidebar">
    <div class="sidebar-title">
     <div class="sidebar-brand">
-    <span class="material-icons-outlined">account_circle</span><?=  $_SESSION['Email']; ?>
+    <span class="material-icons-outlined">account_circle</span> Welcome</br><?=  $_SESSION['Email']; ?>
     </div>
     <span class="material-symbols-outlined" onclick="closeSidebar()">Close</span>
    </div>
@@ -83,7 +88,17 @@ function showHint(str) {
      <span class="material-icons-outlined">category</span><a href="Add-category.php">Categories</a>
      </li>
      <li class="sidebar-list-item">
-     <span class="material-icons-outlined">groups</span><a href="users.php">Users</a>
+     <!-- <span class="material-icons-outlined">groups</span><a href=""></a> -->
+     <div class="dropdown-center">
+  <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <span class="material-icons-outlined">groups</span> Users
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="users.php">Users</a></li>
+    <li><a class="dropdown-item" href="admin.php">Admin</a></li>
+    <li><a class="dropdown-item" href="#"></a></li>
+  </ul>
+</div>
      </li>
      <li class="sidebar-list-item">
      <span class="material-icons-outlined">fact_check</span><a href="inventory.php">Inventory</a>

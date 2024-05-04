@@ -133,21 +133,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $result=mysqli_fetch_assoc($query);
             
             
+    if ($result['role'] == 0 ||$result['role'] == 1 ) {
                 // User with provided email found, verify password
                 $hashedPassword = $result['Password'];
-                
+               
                 if (password_verify($password, $hashedPassword)) {
                     // echo 'login success';
                     //  login was successfull.. proceed with setting cookies and sessions and redirecting
                     
-                    $_SESSION['Email'] = $email;
-                    $_SESSION['id'] = $id;
+                    
                     
                     if(!empty($_POST['remember'])){
                         $set_remember = $_POST['remember'];
                         
                         // set session
                         $_SESSION['Email'] = $email;
+                        $role= $result['role'];
+                        $_SESSION['role']=$role;
+                        
+
                         //set cookie that will be used to auto login a user.
                         
                         setcookie('user_id', md5($result['id']),time()+3600);
@@ -167,6 +171,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // header('Location:login.php?error=Wrong credentials');
                 }
                 
+            } else {
+            
+                header('Location:login.php?error=Role is invalid');
+            }
             // No user with provided email found
         
 }

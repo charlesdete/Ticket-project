@@ -1,5 +1,20 @@
 <?php
-session_start();
+
+
+//database connection
+$servername = "localhost";
+$dbname = "event_ticket";
+$dbusername = "charlie";
+$dbpassword = "root123@";
+
+
+ 
+$conn =mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
+
+//check connection
+if(!$conn){
+    die("connection failed:" .mysqli_connect_error());
+}
 ?>
 <!Doctype html>
 <html>
@@ -9,6 +24,7 @@ session_start();
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  
 </head>
 <body>
 <div class="navbar">
@@ -17,38 +33,44 @@ session_start();
          </div>
            <div class="menu">
             <ul>
-              
+            <li><a href="about.php">ABOUT US</a></li>
               <li><a href="services.php">SERVICES</a></li>
               <li><a href="contact.php">CONTACT</a></li>
+                    <?php
+                    session_start();
+                    
+                    //running conditions based on the pages being accessed
+                    if(isset($_SESSION['Email'])){
+                  //if the session is not set show login 
+                  ?>
+                     <li><a href="logout.php"><i class="uil uil-sign-out-alt"></i>LOGOUT</a></li> 
+                   
+                  <?php
 
-              <?php
-            if(isset($_SESSION['Email'] ))
-            {
-            ?> 
-              <li><a href="logout.php">LOGOUT</a></li> 
-            <?php
-               $sql = "SELECT * FROM users where role = 1";
-               $query= mysqli_query($conn,$sql);
-               $userrole= mysqli_fetch_assoc($query);
-                
+                    }else{
+                      ?>
+                      <li><a href="login.php"><i class="uil uil-sign-in-alt"></i>LOGIN</a></li> 
+                   <li><a href="registration.php">REGISTER</a></li>
+                        
+                       <?php 
 
-           if($userrole == true){
-             ?> 
-             <li><a href="dashboard.php">Admin</a></li> 
-           <?php  
-           }
-            }
-            else
-            {
-              ?>
-              <li><a href="registration.php">REGISTER</a></li> 
-              <li><a href="login.php">LOGIN</a></li> 
-              <?php
-            }
+                    }?>
 
+             <?php          
            
+             if(isset($_SESSION['role']) && $_SESSION['role'] == 1 ){
+              echo  ' <li><a href="dashboard.php">DASHBOARD</a> </li>'; 
+             }
+             else{            
               ?>
-             <li><a href="cart.php">ADD CART</a></li>
+              <!-- <li><a href="cart.php">ADD CART</a></li>  -->
+              <?php
+            }
+
+          
+            
+              ?>
+             <!-- <li><a href="cart.php">ADD CART</a></li> --> 
             </ul> 
            </div>
          </div>

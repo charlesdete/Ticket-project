@@ -12,6 +12,17 @@
         font-size: 35px;
         color: #000;
     }
+    .btn {
+        color: #000;
+
+    }
+    .btn:hover{
+        color: #eee;
+    }
+    .dropdown-item a:hover{
+         color:#eee;
+         background-color: gray;
+    }
     .grid-container{
     display:grid;
     grid-template-columns:260px 1fr 1fr 1fr;

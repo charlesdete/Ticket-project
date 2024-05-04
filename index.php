@@ -1,7 +1,9 @@
 <?php
+include 'header.php';
+
 
  if(!isset($_SESSION['Email'])){
-      header ('location:login.php'); 
+       header ('location:login.php'); 
   }
 
 
@@ -24,7 +26,7 @@ class buy_ticket extends Dbh{
   }
   
 include 'log_user_activity.php';
-include 'header.php';
+
 
 //fetch 9 posts from posts table
 $query = "SELECT * FROM tickets ORDER BY Date DESC LIMIT 9";

@@ -2,7 +2,7 @@
 
 session_start();
 session_unset();
-session_abort();
+session_destroy();
 
 //Going back to the front page
 
