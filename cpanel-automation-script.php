@@ -2,7 +2,7 @@
 
 echo "Fetching path\n\n";
 
-$target_directory = "public_html";//"myticket.charlesdete.com";
+$target_directory = "myticket.charlesdete.com";//"myticket.charlesdete.com";
 $base_url = "C:\Users\user\Sites\Event tickets project";
 $path = getcwd();
 $files = glob($path . '/*');

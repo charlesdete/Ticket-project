@@ -1,6 +1,4 @@
-<?php
-include 'header.php';
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +52,7 @@ include 'header.php';
 
 <?php
 
+include 'header.php';
 
 //database connection
 $servername = "localhost";

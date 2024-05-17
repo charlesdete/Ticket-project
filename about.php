@@ -15,7 +15,7 @@ include 'header.php';
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
 
@@ -47,7 +47,7 @@ include 'header.php';
         
 
           <div class="core-value-item">
-          <i class="uit uit-flip-v-alt"></i>
+          <i class="uil uil-flip-v-alt"></i>
           <h2> Transparency  </h2>
           <p>
           We are fully honest, open, and authentic with ourselves and our customers. Allergic to ‘corporate’ speak, we practice open and clear communication at all times.
@@ -56,7 +56,7 @@ include 'header.php';
 
           </div>
           <div class="core-value-item">
-          <span class="material-icons-outlined">account_circle</span>
+          <i class="uil uil-users-alt"></i>
             <h2> Real Team Work  </h2>
 
             <p>
@@ -65,7 +65,7 @@ include 'header.php';
 
           </div>
           <div class="core-value-item">
-          <span class="material-icons-outlined">account_circle</span>
+          <i class="uil uil-trees"></i>
             <h2>Professional Growth  </h2>
 
             <p>

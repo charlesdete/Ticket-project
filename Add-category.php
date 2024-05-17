@@ -30,14 +30,14 @@
             if(isset($_SESSION['id']))
             {
             ?>
-              <li><a href="registration.php">REGISTER</a></li> 
+              
               <li><a href="logout.php">LOGOUT</a></li> 
             <?php
             }
             else
             {
               ?>
-              <li><a href="signup.php">SIGNUP</a></li> 
+              <li><a href="signup.php">REGISTER</a></li> 
               <li><a href="login.php">LOGIN</a></li> 
               <?php
             }
