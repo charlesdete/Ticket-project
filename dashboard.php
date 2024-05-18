@@ -1,6 +1,5 @@
  <?php
  session_start();
-$_SESSION['Email'] = $user[1]['Email'];
  if(!isset($_SESSION['Email'])){
        header ('location:login.php'); 
  }

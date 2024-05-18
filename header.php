@@ -34,7 +34,7 @@ if(!$conn){
            <div class="menu">
             <ul>
             <li><a href="about.php">ABOUT US</a></li>
-              <li><a href="services.php">SERVICES</a></li>
+              
               <li><a href="contact.php">CONTACT</a></li>
                     <?php
                     session_start();

@@ -4,6 +4,7 @@
 // if(!isset($_SESSION['Email'])){
 //       header ('location:login.php'); 
 //  }
+include 'header.php';
 
 ?>
 
@@ -13,39 +14,10 @@
     <head> 
         <title>CREATE NEW Category </title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
 <body>  
-    
-<div class="navbar">
-     <div class="icon">
-       <h2 class="logo"><i class="uil uil-ticket"></i>TICKET</h2>
-         </div>
-           <div class="menu">
-            <ul>
-              <li><a href="about.php">ABOUT</a></li>
-              <li><a href="services.php">SERVICES</a></li>
-              <li><a href="contact.php">CONTACT</a></li>
 
-              <?php
-            if(isset($_SESSION['id']))
-            {
-            ?>
-              
-              <li><a href="logout.php">LOGOUT</a></li> 
-            <?php
-            }
-            else
-            {
-              ?>
-              <li><a href="signup.php">REGISTER</a></li> 
-              <li><a href="login.php">LOGIN</a></li> 
-              <?php
-            }
-              ?>
-             
-            </ul> 
-           </div>
-         </div>
         
  <div class="card2">
  <form action="add-category.inc.php" <?php echo

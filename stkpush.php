@@ -1,18 +1,19 @@
 <?php 
+if(isset($_POST['submit'])){
 //include the access token file
 include 'accesstoken.php';
 date_default_timezone_set('Africa/Nairobi');
 $ProcessrequestUrl ='https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
-$callbackurl = 'http://myticket.charlesdete.com/call-back.php';
+$Callbackurl = 'http://charlesdete.com/call-back.php';
 $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';
 $BusinessShortCode = '174379';
 $Timestamp = date('YmdHis');
 //Encrypting data to get password
 $Password =base64_encode($BusinessShortCode . $Passkey . $Timestamp);
-$Phone = '254794953436';
-$Money = '1';
+$Phone = $_POST['Phone'];
+$Money = $_POST['Amount'];
 $PartyA = $Phone;
-$PartyB = '254708374149';
+$PartyB = '254794953436';
 $AccountReference = 'MyTICKET';
 $TransactionDesc = 'stkpush test';
 $Amount = $Money;
@@ -32,7 +33,7 @@ $curl_post_data = array(
     'PartyA' => $PartyA,
     'PartyB' => $BusinessShortCode,
     'PhoneNumber' => $PartyA,
-    'callbackurl' => $callbackurl,
+    'Callbackurl' => $Callbackurl,
     'AccountReference' => $AccountReference,
     'TransactionDesc' => $TransactionDesc
 
@@ -45,3 +46,4 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
 $curl_response = curl_exec($curl);
  
 echo $curl_response;
+}
